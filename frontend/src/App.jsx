@@ -119,13 +119,15 @@ function App() {
   return (
     <div className="dashboard-page">
       <header className="topbar">
-        <div className="topbar-brand">
-          <div className="topbar-brand-dot" />
-          <span className="topbar-brand-name">SalesCore</span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
-          <span className="topbar-meta">Halo, <strong>Admin</strong></span>
-          <button className="btn-logout" onClick={handleLogout}>Keluar</button>
+        <div className="topbar-inner">
+          <div className="topbar-brand">
+            <div className="topbar-brand-dot" />
+            <span className="topbar-brand-name">SalesCore</span>
+          </div>
+          <div className="topbar-actions">
+            <span className="topbar-meta">Halo, <strong>Admin</strong></span>
+            <button className="btn-logout" onClick={handleLogout}>Keluar</button>
+          </div>
         </div>
       </header>
 

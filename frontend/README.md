@@ -2,6 +2,33 @@
 
 SalesCore adalah platform analisis penjualan full-stack yang mengintegrasikan Machine Learning untuk memprediksi kelayakan jual produk secara real-time. Aplikasi ini dibangun dengan standar industri menggunakan Modern Web Stack dan Automated Analytics Pipeline.
 
+1. Diagram Arsitektur (High-Level)
+[ User Browser ] <──(REST API/JSON)──> [ FastAPI Backend ]
+       ^                                      │
+       │ (React/Vite UI)                      ├──> [ ML Model: Random Forest ]
+       └──────────────────────────────────────┤
+                                              └──> [ Data Source: CSV File ]
+
+2. Penjelasan Komponen
+    React Frontend (Vite): Bertanggung jawab atas antarmuka pengguna (UI). Mengelola state login, formulir input data penjualan, dan menampilkan tabel riwayat secara reaktif.
+
+    Python Backend (FastAPI): Bertindak sebagai jembatan (middleware). Menyediakan endpoint API untuk autentikasi, pengambilan data, dan pengiriman parameter ke model ML.
+
+    Machine Learning (Scikit-Learn): Menggunakan algoritma Random Forest Classifier yang telah dilatih sebelumnya (.pkl). Model ini menerima data numerik (Terjual, Harga, Diskon) dan mengembalikan label klasifikasi ("Laris" / "Tidak").
+
+    Data Source (CSV): Berperan sebagai database sederhana yang menyimpan ribuan baris riwayat transaksi untuk ditampilkan pada dashboard.                      
+
+3. Alur Data (Data Flow)
+    Input: Pengguna memasukkan data produk melalui form di Frontend.
+
+    Request: Frontend mengirimkan data tersebut dalam format JSON ke endpoint /predict di Backend.
+
+    Processing: Backend meneruskan data ke fungsi ml_handler.py. Model ML memuat file .pkl dan melakukan komputasi prediksi.
+
+    Retrieval: Secara bersamaan, Backend membaca sales_data.csv menggunakan Pandas untuk memperbarui tabel riwayat.
+
+    Output: Hasil prediksi dan data tabel dikirim kembali ke Frontend untuk ditampilkan kepada pengguna secara instan.                           
+
 *Struktur Proyek (Project Anatomy)*
 
 mini-sales-ai/
