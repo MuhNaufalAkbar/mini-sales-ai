@@ -106,6 +106,7 @@ Arsitektur Model Machine Learning
 
 Kontributor: Muhammad Naufal Akbar
 
-<img width="1567" height="897" alt="hasil analisis model" src="https://github.com/user-attachments/assets/9d8d29d2-3aa1-4fa1-9621-5dc56ca4422e" />
 <img width="1920" height="917" alt="Halaman Login" src="https://github.com/user-attachments/assets/fe95ae13-8e21-4260-9dfb-ebc700b7b92a" />
 <img width="1517" height="917" alt="dashboard" src="https://github.com/user-attachments/assets/bcb12365-bbd5-4960-afdd-908e6e63196d" />
+<img width="1567" height="897" alt="hasil analisis model" src="https://github.com/user-attachments/assets/9d8d29d2-3aa1-4fa1-9621-5dc56ca4422e" />
+
