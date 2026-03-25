@@ -1,0 +1,28 @@
+# --- Python / Backend ---
+__pycache__/
+*.py[cod]
+*$py.class
+backend/venv/
+backend/.venv/
+.venv/
+venv/
+*.pkl
+.env
+
+# --- Node / Frontend ---
+frontend/node_modules/
+node_modules/
+frontend/dist/
+frontend/build/
+.eslintcache
+npm-debug.log*
+
+# --- OS / IDE ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.log
+
+# --- Data (Opsional jika file sangat besar) ---
+# data/*.csv
