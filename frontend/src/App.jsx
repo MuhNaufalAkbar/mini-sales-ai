@@ -171,7 +171,7 @@ function App() {
             </div>
 
             <button type="submit" className="btn-primary" disabled={predictLoading}>
-              {predictLoading ? <span className="spinner" /> : 'CEK STATUS →'}
+              {predictLoading ? <span className="spinner" /> : 'CEK STATUS'}
             </button>
           </form>
 
